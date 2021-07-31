@@ -33,12 +33,13 @@
     "typescript": "^4.3.5"
   },
   "scripts": {
-    "start": "node ./src/api",
+    "start": "ts-node ./src/api/index.ts",
     "dev": "npx nodemon --exec ts-node src/api/index.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/GabrielStevanelli/bancoDeDados-API.git",
   "author": "GabrielStevanelli <Gabriel_stevanelli@hotmail.com>",
   "license": "MIT"
+
 }
