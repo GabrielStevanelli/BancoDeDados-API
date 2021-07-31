@@ -7,12 +7,15 @@
     "deploy-node-app": "^1.4.3",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.35",
     "uuidv4": "^6.2.11"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.19.1",
+    "@types/express": "^4.17.13",
     "babel-eslint": "10.0.1",
+    "concurrently": "^4.1.0",
     "cross-spawn": "^6.0.5",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
@@ -22,9 +25,20 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "prettier": "^1.17.1"
+    "nodemon": "^2.0.12",
+    "prettier": "^1.17.1",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
   },
   "scripts": {
-    "start": "node ./src/api"
-  }
+    "start": "node ./src/api",
+    "dev": "npx nodemon --exec ts-node src/api/index.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/GabrielStevanelli/bancoDeDados-API.git",
+  "author": "GabrielStevanelli <Gabriel_stevanelli@hotmail.com>",
+  "license": "MIT"
 }
