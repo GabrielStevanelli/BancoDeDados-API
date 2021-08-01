@@ -6,9 +6,10 @@ import routes from './routes';
 
 createConnection(config as ConnectionOptions).then(async (connection) => {
     const app = express()
+    const port = process.env.PORT||8000
 
     app.use(express.json());
     app.use(routes);
 
-    app.listen(8000, () => console.log('deu certo!'));
+    app.listen(port, () => console.log('deu certo!'));
 })

@@ -45,12 +45,13 @@ var typeorm_1 = require("typeorm");
 var ormconfig_1 = __importDefault(require("./ormconfig"));
 var routes_1 = __importDefault(require("./routes"));
 typeorm_1.createConnection(ormconfig_1.default).then(function (connection) { return __awaiter(void 0, void 0, void 0, function () {
-    var app;
+    var app, port;
     return __generator(this, function (_a) {
         app = express_1.default();
+        port = process.env.PORT || 8000;
         app.use(express_1.default.json());
         app.use(routes_1.default);
-        app.listen(8000, function () { return console.log('deu certo!'); });
+        app.listen(port, function () { return console.log('deu certo!'); });
         return [2 /*return*/];
     });
 }); });
